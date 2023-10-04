@@ -19,7 +19,7 @@ const Game = () => {
 
   return (
     <>
-      <RenderGuess guesses={guesses} />
+      <RenderGuess guesses={guesses} answer={answer} />
       <GuessInput handleAddGuess={handleAddGuess} />
     </>
   );
