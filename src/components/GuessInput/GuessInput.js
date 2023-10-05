@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 
-const GuessInput = ({ handleAddGuess }) => {
+const GuessInput = ({ gameStatus, handleAddGuess }) => {
   const [guess, setGuess] = useState('');
 
   const handleSubmit = (e) => {
@@ -25,6 +25,7 @@ const GuessInput = ({ handleAddGuess }) => {
           minLength={5}
           maxLength={5}
           required
+          disabled={gameStatus !== 'running'}
         />
       </form>
     </div>
